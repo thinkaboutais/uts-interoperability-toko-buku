@@ -16,3 +16,14 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->get('/penerbit', 'PenerbitController@index');
+
+$router->get('/penerbit/{id}', 'PenerbitController@show');
+
+$router->post('/penerbit', 'PenerbitController@store');
+
+$router->put('/penerbit/{id}', 'PenerbitController@update');
+
+$router->delete('/penerbit/{id}', 'PenerbitController@destroy');
+
